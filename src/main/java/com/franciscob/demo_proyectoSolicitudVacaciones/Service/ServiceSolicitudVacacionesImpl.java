@@ -34,11 +34,20 @@ public class ServiceSolicitudVacacionesImpl  implements  ServiceSolicitudVacacio
 
     @Override
     public SolicitudVacaciones save(SolicitudVacaciones solicitudVacaciones) {
+
+        //validacion de fechas
+        if (solicitudVacaciones.getFechaFin().isBefore(solicitudVacaciones.getFechaInicio())){
+            throw new IllegalArgumentException("La fecha de fin no puede ser anterior a inicio");
+        }
         return  repositorySolicitudVacaciones.save(solicitudVacaciones);
     }
 
     @Override
     public Optional<SolicitudVacaciones> update(Long id, SolicitudVacaciones updatesolicitudVacaciones) {
+
+        if (updatesolicitudVacaciones.getFechaFin().isBefore(updatesolicitudVacaciones.getFechaInicio())){
+            throw  new IllegalArgumentException("La fecha de fin no puede ser anterior a la fecha de inicio");
+        }
         return  repositorySolicitudVacaciones.findById(id).map(existeSolicitud ->{
             existeSolicitud.setNombreEmpleado(updatesolicitudVacaciones.getNombreEmpleado());
             existeSolicitud.setFechaInicio(updatesolicitudVacaciones.getFechaInicio());
