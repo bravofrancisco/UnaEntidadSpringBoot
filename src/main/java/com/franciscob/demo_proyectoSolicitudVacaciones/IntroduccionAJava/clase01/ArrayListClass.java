@@ -1,4 +1,4 @@
-package com.franciscob.demo_proyectoSolicitudVacaciones.IntroduccionAJava;
+package com.franciscob.demo_proyectoSolicitudVacaciones.IntroduccionAJava.clase01;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -36,7 +36,7 @@ public class ArrayListClass {
         cars2.add("Mazda");
         System.out.println("cars2 = " + cars2);
 
-        // HashMap almacena pares clave-valor que son valores y se pueden encontrar por una clave (como un nombre o ID)
+        // HashMapClass almacena pares clave-valor que son valores y se pueden encontrar por una clave (como un nombre o ID)
         HashMap<String, String> capitalCities = new HashMap<String, String>();
         capitalCities.put("England", "London");
         capitalCities.put("Germany", "Berlin");

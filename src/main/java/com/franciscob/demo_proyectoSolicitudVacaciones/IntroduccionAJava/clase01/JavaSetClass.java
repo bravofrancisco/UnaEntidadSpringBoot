@@ -1,4 +1,4 @@
-package com.franciscob.demo_proyectoSolicitudVacaciones.IntroduccionAJava;
+package com.franciscob.demo_proyectoSolicitudVacaciones.IntroduccionAJava.clase01;
 
 import java.util.HashSet;
 

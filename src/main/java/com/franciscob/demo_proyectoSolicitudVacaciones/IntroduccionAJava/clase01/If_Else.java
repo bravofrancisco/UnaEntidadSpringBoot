@@ -1,4 +1,4 @@
-package com.franciscob.demo_proyectoSolicitudVacaciones.IntroduccionAJava;
+package com.franciscob.demo_proyectoSolicitudVacaciones.IntroduccionAJava.clase01;
 
 public class If_Else {
     public static void main(String[] args) {
